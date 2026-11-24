@@ -1,0 +1,1 @@
+Arquivo de exemplo para testar cópia e verificação reais no NORT Desktop AI.

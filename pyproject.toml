@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nort-desktop-ai"
+version = "0.1.0"
+description = "Agente desktop Windows com planejamento Groq e execução supervisionada"
+requires-python = ">=3.9"
+dependencies = ["PySide6>=6.6,<7", "playwright>=1.48,<2", "openpyxl>=3.1,<4", "keyring>=25,<26", "pywinauto>=0.6.8,<0.7; sys_platform == 'win32'"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9", "pyinstaller>=6,<7"]
+
+[project.gui-scripts]
+nort-desktop-ai = "nort.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["nort*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
